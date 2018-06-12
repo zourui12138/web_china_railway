@@ -558,19 +558,19 @@
                 return str;
             },
             moveTip() {
-                $(this.$refs.tipBlock).animate({left:'-66px'},() => {
+                $(this.$refs.tipBlock).stop().animate({left:'-66px'},() => {
                     this.tipBlockData = this.tipBlockData.concat(this.tipBlockData.splice(0,1));
                     $(this.$refs.tipBlock).css('left',0);
                 });
             },
             moveLeftTop() {
-                $(this.$refs.leftTop).animate({top:'-54px'},() => {
+                $(this.$refs.leftTop).stop().animate({top:'-54px'},() => {
                     this.tradeData = this.tradeData.concat(this.tradeData.splice(0,1));
                     $(this.$refs.leftTop).css('top',0);
                 });
             },
             moveRightBottom() {
-                $(this.$refs.rightBottom).animate({top:'-134px'},() => {
+                $(this.$refs.rightBottom).stop().animate({top:'-134px'},() => {
                     this.blockChainTrade = this.blockChainTrade.concat(this.blockChainTrade.splice(0,1));
                     $(this.$refs.rightBottom).css('top',0);
                 });
@@ -638,7 +638,7 @@
             height: 0;
         }
         100%{
-            height: 50px;
+            height: 70px;
         }
     }
     #dashboard{
@@ -871,10 +871,10 @@
                                 animation-iteration-count: infinite;
                             }
                             h2{
-                                width: 1px;
-                                height: 50px;
+                                width: 13px;
+                                height: 60px;
                                 margin: 10px auto 0;
-                                background: url(imgUrl('dashed.png')) repeat-y center;
+                                background: url(imgUrl('dashed.png')) no-repeat center bottom;
                                 animation: test2 1s;
                                 animation-timing-function: linear;
                                 animation-iteration-count: infinite;

@@ -20,7 +20,7 @@ export default new Router({
         // 路由'/'重定向
         {
             path: '/',
-            redirect: '/platform/home'
+            redirect: '/dashboard'
         },
         {
             path: '/dashboard',
