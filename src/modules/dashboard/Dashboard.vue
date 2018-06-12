@@ -643,6 +643,7 @@
     }
     #dashboard{
         height: 100%;
+        width: 1920px;
         .container{
             background: url(imgUrl('bg.png')) no-repeat center top;
             .header{
@@ -655,7 +656,9 @@
                 font-size: 30px;
             }
             .section{
-                padding: 0 60px 20px;
+                width: 1800px;
+                margin: auto;
+                padding-bottom: 20px;
                 .left_top{
                     height: 390px;
                     width: 410px;
