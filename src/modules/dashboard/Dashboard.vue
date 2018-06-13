@@ -351,7 +351,6 @@
                     legendData.push(item.company);
                 });
                 this.mapSeries[0].data.splice(0,1);
-                console.log(this.mapSeries[0].data);
                 for (let i = 0; i < 2; i++) {
                     let x = Math.floor(Math.random()*(this.coordinates.length-1)+1);
                     let same = false;//判断是否有相同的数字

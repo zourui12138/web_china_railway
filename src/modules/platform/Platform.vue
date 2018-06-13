@@ -7,7 +7,7 @@
                     class="navMenu"
                     background-color="#1670b9"
                     text-color="#fff"
-                    unique-opened="true"
+                    :unique-opened="true"
                     default-active="2-1">
                     <el-menu-item-group>
                         <template slot="title">最新资源</template>

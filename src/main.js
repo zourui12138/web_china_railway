@@ -18,6 +18,18 @@ Vue.directive('scroll', {
     componentUpdated:  (el) => {el.scrollTop = 0;}
 });
 
+Vue.mixin({
+    created() {
+        let myOption = this.$options.myOption;
+        myOption && console.log(myOption);
+    },
+    methods: {
+        href() {
+            console.log('123');
+        }
+    }
+});
+
 new Vue({
     el: '#app',
     router,
