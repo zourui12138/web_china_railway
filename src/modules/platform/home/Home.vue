@@ -96,6 +96,36 @@
             console.log(Object.isFrozen(freeObj));
             // 判断一个对象是否被密封。
             console.log(Object.isSealed(obj1));
+            // 返回一个由一个给定对象的自身可枚举属性组成的数组
+            console.log(Object.keys(obj1));
+            // 让一个对象变的不可扩展，也就是永远不能再添加新的属性。
+            let extendsObj = {a:1,b:2};
+            Object.preventExtensions(extendsObj);
+            // 指示对象自身属性中是否具有指定的属性
+            obj1.hasOwnProperty('a');
+            // 返回值为该对象的原始值。
+            console.log(obj1.valueOf());
+            // 封闭一个对象，阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要可写就可以改变
+            let sealObj = {a:1,b:2};
+            console.log(Object.seal(sealObj));
+            // 返回一个给定对象自己的所有可枚举属性值的数组
+            console.log(Object.values(obj1));
+
+            // Function
+            let module = {
+                x: 42,
+                getX: function() {
+                    return this.x;
+                }
+            };
+            console.log(module.getX());
+            let func = module.getX;
+            // console.log(func());// 报错
+            // 因为this的指向为全局
+            // bind提前绑定this指向，并且返回绑定过后的函数，且原函数不会发生绑定，即指定的this值和初始化参数改造的原函数拷贝
+            let func1 = func.bind(module);
+            //console.log(func());
+            console.log(func.bind(module)());
         }
     }
 </script>
